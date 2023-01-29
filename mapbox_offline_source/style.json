@@ -1,0 +1,23 @@
+{
+  "version": 8,
+  "name": "Basic",
+  "sprite": "http://127.0.0.1:8081/sprite/sprite",
+  "glyphs": "http://127.0.0.1:8081/fonts/{fontstack}/{range}.pbf",
+  "sources": {
+    "osm-tiles": {
+      "type": "raster",
+      "tiles": [
+        "http://localhost:8088/geoserver/osm/gwc/service/wmts?layer=osm%3Aosm&style=&tilematrixset=EPSG%3A900913&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image%2Fpng&TileMatrix=EPSG%3A900913%3A{z}&TileCol={x}&TileRow={y}"
+      ],
+      "tileSize": 256
+    }
+  },
+  "layers": [
+    {
+      "id": "osmtiles",
+      "type": "raster",
+      "source": "osm-tiles",
+      "source-layer": "osmtiles"
+    }
+  ]
+}
